@@ -1,0 +1,78 @@
+#include <Windows.h>
+#include <stdio.h>
+//출력 , 변수 , 연산자(4) , 입력 , 조건문 , 반복문 , 배열
+//연산자 (operator)
+// 1. 산술연산자(5) ==>  + - * / % 
+// 2. 대입연산자(1) ==>  a = 10  ==> 10 을 a 에 저장(복사)한다. 
+// 3. 비교연산자(6) ==>  결과가 1 , 0 이나온다. 1은 참 , 0 은 거짓을 뜻한다.
+//      1)   같다        10 == 10
+//      2)   다르다      10 != 3
+//      3)   크다        10 >  3
+//      4)   작다        10 <  23
+//      5)   크거나같다   10 >= 10
+//      6)   작거나같다   10 <= 40
+void main(){
+	printf("%d" , 1 == 10); printf("\n");
+	printf("%d" , 10 != 10); printf("\n");
+	printf("%d" , 1 > 10); printf("\n");
+	printf("%d" , 11 < 10); printf("\n");
+	printf("%d" , 1 >= 10); printf("\n");
+	printf("%d" , 11 <= 10); printf("\n");
+	printf("============================");printf("\n");
+	//문제1) 전부 1이나오도록 숫자를 변경해보세요.
+	int a = 10;
+	int b = 20;
+	a = 20;
+	printf("%d" , a == b); printf("\n");
+	b = 1;
+	printf("%d" , a != b); printf("\n");
+	printf("%d" , a > b); printf("\n");
+	b = 30;
+	printf("%d" , a < b); printf("\n");
+	a = 30;
+	printf("%d" , a >= b); printf("\n");
+	printf("%d" , a <= b); printf("\n");
+	system("pause");
+}
+[출처] day_03_oper|작성자 momk
+
+
+
+#include <Windows.h>
+#include <stdio.h>
+// 입력 ==> scanf_s(1, 2); // 1) "%d"//다른문자가 섞이거나 공백은 안된다.
+//                        //  2) &a ==>  변수 앞에 & 표시를 반드시 붙여야한다.
+void main(){
+	printf("시작"); printf("\n");
+	int a; // -20~20억사이
+	printf("숫자를 하나 입력하세요 "); // 안내문구를 써주면 좋다.
+	scanf_s("%d" , &a); 
+	// 숫자를 입력하고 엔터를 누를때까지 대기한다
+	// 숫자는 a(변수) 에 저장된다.
+	printf("a ==> %d" , a); printf("\n");
+	printf("끝");printf("\n");
+	system("pause");
+}
+#include <Windows.h>
+#include <stdio.h>
+void main(){
+	//문제 1) 비밀번호 2개를 입력받고 맞으면 1출력
+	int pw1;
+	int pw2;
+	printf("비밀번호를 입력하세요 ");
+	scanf_s("%d" , &pw1);
+	printf("비밀번호를 다시한번입력하세요 ");
+	scanf_s("%d" , &pw2);
+	//문제 2) 점수를 입력받고 60이상이면 1출력
+	int score1;
+	//문제 3) 가로세로를 입력받고 삼각형 넓이 출력
+	int garo; int sero;
+	//문제 3) 숫자하나를 입력받고 짝수면 1출력 
+	int num1;
+	//문제 4) 돈을 입력받고 화폐 매수 출력 //5만원 ~~~ 1백원 까지 
+	int money;
+
+	system("pause");
+}
+[출처] day_03_input작성자 momk
+
