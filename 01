@@ -1,0 +1,64 @@
+#include <Windows.h>
+#include <stdio.h>
+//복습 //f5 ==>  ctrl + f5
+void main(){
+	int num1 = 30; // 축약형 ==>선언과 저장을 한번에 할수있다.
+	int num2 = 50;
+	//문제1) num1 과 num2 의 값을 서로 교환해보세요 ~~ (힌트) 빈변수를 하나 활용하자~
+	int temp;
+	temp = num1;
+	num1 = num2;
+	num2 = temp;
+	printf("%d" , num1); printf("\n");
+	printf("%d" , num2); printf("\n");
+	//문제1) 성적3개를 저장하고 총합 평균 출력 
+	int s1; int s2; int s3 = 10;
+	s1 = 30;
+	s2 = 40;
+	int total;
+	total = s1 + s2 + s3;
+	int average;
+	average = total /3;
+	printf("총점 : %d" , total);		printf("\n");
+	printf("평균 : %d" , average);	printf("\n");
+	system("pause");
+}
+#include <Windows.h>
+#include <stdio.h>
+void main(){
+	//몫과 나머지 연습
+	int num = 100; // 1 분 40 초 
+	int min;
+	int second;
+	min = num / 60;
+	second = num % 60;
+	printf("%d 분 %d 초" , min , second); printf("\n");
+	int hour; // 
+	num  = 4503; 
+	//과제)  시분초 로 출력 
+	//========================================================
+	num = 200;
+	//문제) 숫자를 개월 과 일로 표현해보세요 (조건 : 1개월은 30일로 고정)
+	// 6개월 20일 
+	int month;
+	int day;
+	month = num / 30;
+	day = num % 30;
+	//문제) 돈을 화폐 매수로 출력 
+	// 5천원 1장 , 1천원 3장 , 5백원 1개 , 1백원 4개;
+	int money = 8900;
+	int m5000;
+	int m1000;
+	int m500;
+	int m100;
+	m5000 = money / 5000;
+	m1000 = money % 5000 / 1000; // 먼저 5000을 제외시키고 나머지에서 1000으로 나눠서 구한다.
+	//심화)  날을 저장하고 요일출력 0,1,2,3,4,5,6 ==> 일 ~ 토요일 
+	// 15일 ==> 4	
+	int today = 15; //==>  4
+
+	system("pause");
+}
+
+[출처] day_03_나머지/몫 연습작성자 momk
+
